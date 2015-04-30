@@ -1,0 +1,25 @@
+HEADER
+<ul>
+	
+	<li >
+		<a ui-sref="home">Inicio</a>
+	</li>
+	<li >
+		<a ui-sref="services">Servicios</a>
+	</li>
+	<li >
+		<a ui-sref="budget">Presupuestar</a>
+	</li>
+	<li >
+		<a ui-sref="aboutus">Sobre Nosotros</a>
+	</li>
+	<li >
+		<a ui-sref="contact">Contactanos</a>
+	</li>
+	<li ng-show="!session.token">
+		<a ui-sref="login">Ingresar</a>
+	</li>
+	<li ng-show="session.token">
+		<a ui-sref="home" ng-click="gapi.logout()">Salir ({{session.user.name}})</a>
+	</li>
+</ul>
